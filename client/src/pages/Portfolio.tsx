@@ -1,5 +1,16 @@
 import { Navigation } from "@/components/Navigation";
 import reelVideo from "@/assets/videos/portfolio-reel.mp4";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import carousel1 from "@/assets/images/carousel-1.jpg";
+import carousel2 from "@/assets/images/carousel-2.jpg";
+import carousel3 from "@/assets/images/carousel-3.jpg";
+import carousel4 from "@/assets/images/carousel-4.jpg";
 
 export default function Portfolio() {
   return (
@@ -79,7 +90,7 @@ export default function Portfolio() {
           </div>
 
           {/* Grid Item 3 */}
-          <div className="md:col-span-6 md:col-start-4">
+          <div className="md:col-span-6 md:col-start-4 mb-24">
              <div className="relative aspect-[4/5] overflow-hidden bg-[#E8E5E1] group cursor-pointer">
                <img src="/src/assets/images/portfolio-3.jpg" alt="Modern Romance" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]" />
                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
@@ -88,6 +99,53 @@ export default function Portfolio() {
                 <h4 className="font-serif text-xl italic">Modern Romance</h4>
                 <span className="text-[9px] tracking-widest uppercase text-muted-foreground">03</span>
              </div>
+          </div>
+
+          {/* Photo Carousel Section */}
+          <div className="md:col-span-12 my-12">
+            <div className="flex justify-between items-end mb-8 px-2 md:px-0">
+              <h3 className="font-serif text-4xl italic">Selected Details</h3>
+              <span className="text-[9px] tracking-widest uppercase text-muted-foreground hidden md:block">Swipe to view</span>
+            </div>
+            
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {[
+                  { src: carousel1, title: "Cake Details" },
+                  { src: carousel2, title: "Champagne Tower" },
+                  { src: carousel3, title: "Candid Moments" },
+                  { src: carousel4, title: "Tablescape Setting" }
+                ].map((item, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="group cursor-pointer">
+                      <div className="relative aspect-[4/3] overflow-hidden bg-[#E8E5E1] mb-4">
+                        <img 
+                          src={item.src} 
+                          alt={item.title} 
+                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                        />
+                      </div>
+                      <div className="flex justify-between items-center px-1">
+                        <h4 className="font-serif text-lg italic">{item.title}</h4>
+                        <span className="text-[9px] tracking-widest uppercase text-muted-foreground">
+                          {String(index + 4).padStart(2, '0')}
+                        </span>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="hidden md:block">
+                <CarouselPrevious className="left-4 -translate-y-1/2 bg-white/80 border-none hover:bg-white text-[#2C2A29]" />
+                <CarouselNext className="right-4 -translate-y-1/2 bg-white/80 border-none hover:bg-white text-[#2C2A29]" />
+              </div>
+            </Carousel>
           </div>
 
         </div>
