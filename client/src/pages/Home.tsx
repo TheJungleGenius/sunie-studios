@@ -8,8 +8,8 @@ export default function Home() {
     <div className="min-h-screen bg-background relative flex flex-col md:flex-row">
       <Navigation />
 
-      {/* Creative Half */}
-      <Link href="/creative" className="group relative flex-1 h-[50vh] md:h-screen overflow-hidden cursor-pointer flex items-center justify-center">
+      {/* Portfolio Half */}
+      <Link href="/portfolio" className="group relative flex-1 h-[50vh] md:h-screen overflow-hidden cursor-pointer flex items-center justify-center">
         {/* Textured Canvas Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90 transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
 
         <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-[#2C2A29]">
-          <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl lowercase italic mb-4 font-light tracking-wide group-hover:text-white transition-colors duration-500">creative</h2>
+          <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl lowercase italic mb-4 font-light tracking-wide group-hover:text-white transition-colors duration-500">portfolio</h2>
           <span className="text-[10px] tracking-[0.2em] uppercase border border-[#2C2A29]/30 px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 group-hover:border-white/50 group-hover:text-white transition-all duration-500 backdrop-blur-sm">enter</span>
         </div>
       </Link>

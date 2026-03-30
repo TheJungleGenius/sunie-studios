@@ -84,6 +84,13 @@ export function Navigation() {
                 home
               </Link>
               <Link
+                href="/portfolio"
+                onClick={() => setIsOpen(false)}
+                className="hover:italic transition-all"
+              >
+                portfolio
+              </Link>
+              <Link
                 href="/offerings"
                 onClick={() => setIsOpen(false)}
                 className="hover:italic transition-all"
