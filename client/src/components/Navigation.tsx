@@ -9,32 +9,34 @@ export function Navigation() {
     <>
       {/* Desktop Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center mix-blend-difference text-white uppercase text-xs tracking-widest font-medium">
-        <Link href="/" className="hover:opacity-70 transition-opacity">
-          The Sunie Studio
-        </Link>
-        <div className="flex gap-8">
-          <a
-            href="https://www.instagram.com/thesuniestudio/?hl=en"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:opacity-70 transition-opacity"
-          >
-            IG.
-          </a>
-          <a
-            href="https://www.tiktok.com/@onthedaysocials"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:opacity-70 transition-opacity"
-          >
-            TIKTOK.
-          </a>
-          <button
-            onClick={() => setIsOpen(true)}
-            className="hover:opacity-70 transition-opacity uppercase"
-          >
-            Menu
-          </button>
+        <div className="flex items-center gap-8">
+          <Link href="/" className="hover:opacity-70 transition-opacity">
+            The Sunie Studio
+          </Link>
+          <div className="flex gap-8">
+            <a
+              href="https://www.tiktok.com/@onthedaysocials"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:opacity-70 transition-opacity"
+            >
+              TIKTOK.
+            </a>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="hover:opacity-70 transition-opacity uppercase"
+            >
+              Menu
+            </button>
+            <a
+              href="https://www.instagram.com/thesuniestudio/?hl=en"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:opacity-70 transition-opacity"
+            >
+              IG.
+            </a>
+          </div>
         </div>
       </nav>
 

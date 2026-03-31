@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import carousel1 from "@/assets/images/carousel-1.jpg";
 import carousel2 from "@/assets/images/carousel-2.jpg";
 import carousel3 from "@/assets/images/carousel-3.jpg";
@@ -112,7 +113,9 @@ export default function Portfolio() {
               opts={{
                 align: "start",
                 loop: true,
+                dragFree: true,
               }}
+              plugins={[WheelGesturesPlugin()]}
               className="w-full"
             >
               <CarouselContent className="-ml-4">
