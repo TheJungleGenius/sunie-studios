@@ -1,0 +1,84 @@
+
+> rest-express@1.0.0 dev:client
+> vite dev --port 5000
+
+[1G[0K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J
+  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m598[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.31.70.34:[1m5000[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1774963797051,"name":"Error","message":"The requested module '/@fs/home/runner/workspace/node_modules/.vite/deps/embla-carousel-wheel-gestures.js?v=61f70eea' does not provide an export named 'wheelGestures'","stack":""}
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1774963797099,"name":"Error","message":"The requested module '/@fs/home/runner/workspace/node_modules/.vite/deps/embla-carousel-wheel-gestures.js?v=61f70eea' does not provide an export named 'wheelGestures'","stack":""}
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1774963805868,"name":"Error","message":"The requested module '/@fs/home/runner/workspace/node_modules/.vite/deps/embla-carousel-wheel-gestures.js?v=61f70eea' does not provide an export named 'wheelGestures'","stack":""}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:30:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Portfolio.tsx, /src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:30:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Portfolio.tsx, /src/index.css[22m [33m(x2)[39m

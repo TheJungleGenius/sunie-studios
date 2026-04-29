@@ -31,8 +31,8 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   
-  --font-sans: "Inter", sans-serif;
-  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Jost", sans-serif;
+  --font-serif: "Fraunces", serif;
 }
 
 :root {
