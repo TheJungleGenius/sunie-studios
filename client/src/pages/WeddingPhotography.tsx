@@ -9,7 +9,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
-<<<<<<< HEAD
 import aiBen1 from "@/assets/images/ai-ben.jpg";
 import aiBen2 from "@/assets/images/ai-ben-2.jpg";
 import benOlivia1 from "@/assets/images/ben-olivia.jpg";
@@ -51,47 +50,6 @@ const collageItems: CollageItem[] = [
   { src: benOlivia2, title: "Ben & Olivia - Moment", type: "image" },
   { src: chanyaNethmin3, title: "Chanya & Nethmin - After", type: "image" },
   { src: sarahLuke3, title: "Sarah & Luke - Candid", type: "image" },
-=======
-import weddingsHero from "@/assets/images/weddings.jpg";
-import portfolio1 from "@/assets/images/portfolio-1.jpg";
-import portfolio2 from "@/assets/images/portfolio-2.jpg";
-import portfolio3 from "@/assets/images/portfolio-3.jpg";
-import carousel1 from "@/assets/images/carousel-1.jpg";
-import carousel2 from "@/assets/images/carousel-2.jpg";
-import carousel3 from "@/assets/images/carousel-3.jpg";
-import carousel4 from "@/assets/images/carousel-4.jpg";
-
-const gallery = [
-  { src: portfolio1, title: "Villa Celebration", aspect: "aspect-[3/4]" },
-  { src: carousel1, title: "Cake Details", aspect: "aspect-square" },
-  { src: portfolio2, title: "Editorial Details", aspect: "aspect-square" },
-  { src: carousel2, title: "Champagne Tower", aspect: "aspect-[3/4]" },
-  { src: portfolio3, title: "Modern Romance", aspect: "aspect-[4/5]" },
-  { src: carousel3, title: "Candid Moments", aspect: "aspect-[4/3]" },
-];
-
-const detailShots = [
-  { src: carousel4, title: "Tablescape Setting" },
-  { src: carousel1, title: "Cake Details" },
-  { src: carousel2, title: "Champagne Tower" },
-  { src: carousel3, title: "Candid Moments" },
-  { src: portfolio2, title: "Editorial Details" },
-];
-
-const collageItems: CollageItem[] = [
-  { src: portfolio1, title: "Villa Celebration", type: "image" },
-  { src: carousel1, title: "Cake Details", type: "image" },
-  { src: portfolio2, title: "Editorial Details", type: "image" },
-  { src: carousel2, title: "Champagne Tower", type: "image" },
-  { src: portfolio3, title: "Modern Romance", type: "image" },
-  { src: carousel3, title: "Candid Moments", type: "image" },
-  { src: carousel4, title: "Tablescape Setting", type: "image" },
-  { src: weddingsHero, title: "Vows", type: "image" },
-  { src: portfolio1, title: "First Light", type: "image" },
-  { src: carousel2, title: "Toast", type: "image" },
-  { src: portfolio3, title: "After the Ceremony", type: "image" },
-  { src: carousel4, title: "Quiet Hour", type: "image" },
->>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
 ];
 
 export default function WeddingPhotography() {
@@ -111,17 +69,12 @@ export default function WeddingPhotography() {
       {/* Hero */}
       <section className="relative h-screen w-full overflow-hidden">
         <img
-<<<<<<< HEAD
           src={sarahLuke1}
-=======
-          src={weddingsHero}
->>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
           alt="Wedding Photography"
           className="absolute inset-0 w-full h-full object-cover object-center scale-105"
         />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 text-white">
-<<<<<<< HEAD
           <p className="text-[10px] tracking-[0.3em] uppercase mb-5 opacity-80">
             (Stillness, Remembered)
           </p>
@@ -129,18 +82,6 @@ export default function WeddingPhotography() {
             wedding photography
           </h1>
           <p className="text-[10px] md:text-xs tracking-[0.2em] uppercase max-w-md opacity-80 leading-relaxed mt-6">
-=======
-          <p className="text-[10px] tracking-[0.3em] uppercase mb-6 opacity-80">
-            (Wedding Photography)
-          </p>
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] lowercase italic font-light tracking-wide leading-none">
-            stillness,
-          </h1>
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] lowercase italic font-light tracking-wide leading-none mt-2">
-            remembered
-          </h1>
-          <p className="text-xs tracking-[0.2em] uppercase max-w-md opacity-80 leading-relaxed mt-10">
->>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
             Timeless frames of the quiet details and unrepeatable moments of your day.
           </p>
           <button

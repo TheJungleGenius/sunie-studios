@@ -46,11 +46,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-<<<<<<< HEAD
         <RouteLoader />
-=======
-        <Loader />
->>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
         <Toaster />
         <Router />
       </TooltipProvider>

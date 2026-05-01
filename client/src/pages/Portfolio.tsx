@@ -6,7 +6,6 @@ import reelVideo from "@/assets/videos/portfolio-reel.mp4";
 import creativeLoop from "@/assets/videos/creative-loop.mp4";
 import benGroomsmen from "@/assets/videos/Ben and groomsmen .mp4";
 import oliviaParents from "@/assets/videos/Olivia and parents .mp4";
-<<<<<<< HEAD
 import xenaVideo from "@/assets/videos/Xena no text.mp4";
 import aiBen1 from "@/assets/images/ai-ben.jpg";
 import aiBen2 from "@/assets/images/ai-ben-2.jpg";
@@ -19,15 +18,6 @@ import nicoleMariano from "@/assets/images/nicole-mariano.jpg";
 import sarahLuke1 from "@/assets/images/sarah-luke-1.jpg";
 import sarahLuke2 from "@/assets/images/sarah-luke-2.jpg";
 import sarahLuke3 from "@/assets/images/sarah-luke-3.jpg";
-=======
-import portfolio1 from "@/assets/images/portfolio-1.jpg";
-import portfolio2 from "@/assets/images/portfolio-2.jpg";
-import portfolio3 from "@/assets/images/portfolio-3.jpg";
-import carousel1 from "@/assets/images/carousel-1.jpg";
-import carousel2 from "@/assets/images/carousel-2.jpg";
-import carousel3 from "@/assets/images/carousel-3.jpg";
-import carousel4 from "@/assets/images/carousel-4.jpg";
->>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
 import {
   Carousel,
   CarouselContent,
@@ -63,7 +53,6 @@ type VideoItem = {
 
 const collageItems: CollageItem[] = [
   { src: reelVideo, title: "Portfolio Reel", type: "video" },
-<<<<<<< HEAD
   { src: aiBen1, title: "Ai & Ben - Moment", type: "image" },
   { src: xenaVideo, title: "Xena - Cinematic", type: "video" },
   { src: sarahLuke1, title: "Sarah & Luke - First Look", type: "image" },
@@ -74,18 +63,6 @@ const collageItems: CollageItem[] = [
   { src: sarahLuke2, title: "Sarah & Luke - Details", type: "image" },
   { src: nicoleMariano, title: "Nicole & Mariano", type: "image" },
   { src: chanyaNethmin2, title: "Chanya & Nethmin - Celebration", type: "image" },
-=======
-  { src: portfolio1, title: "Golden Hour", type: "image" },
-  { src: creativeLoop, title: "Creative Loop", type: "video" },
-  { src: carousel1, title: "Cake Details", type: "image" },
-  { src: benGroomsmen, title: "Ben & Groomsmen", type: "video" },
-  { src: portfolio2, title: "Editorial Stills", type: "image" },
-  { src: oliviaParents, title: "Olivia & Parents", type: "video" },
-  { src: carousel2, title: "Champagne Tower", type: "image" },
-  { src: portfolio3, title: "Modern Romance", type: "image" },
-  { src: carousel3, title: "Candid Moments", type: "image" },
-  { src: carousel4, title: "Tablescape", type: "image" },
->>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
 ];
 
 export default function Portfolio() {
@@ -110,7 +87,6 @@ export default function Portfolio() {
       />
 
       <main className="pt-32 px-6 md:px-12 max-w-7xl mx-auto pb-24">
-<<<<<<< HEAD
         <header className="mb-16 md:mb-24 flex flex-col items-center text-center gap-4">
           <h1 className="font-serif text-3xl md:text-5xl lowercase italic font-light tracking-wide">
             wedding content creation
@@ -118,23 +94,6 @@ export default function Portfolio() {
           <p className="text-[10px] md:text-xs tracking-[0.2em] uppercase max-w-sm text-muted-foreground leading-relaxed">
             Motion-first storytelling — aesthetic reels, quiet in-betweens, and cinematic moments in looping form.
           </p>
-=======
-        <header className="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-          <div>
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl lowercase italic font-light tracking-wide mb-4">
-              wedding content creation
-            </h1>
-            <p className="text-xs tracking-[0.2em] uppercase max-w-sm text-muted-foreground leading-relaxed">
-              Motion-first storytelling — aesthetic reels, quiet in-betweens, and cinematic moments in looping form.
-            </p>
-          </div>
-
-          <div className="hidden md:flex gap-4 text-[10px] tracking-widest uppercase">
-            <button className="border border-[#2C2A29]/20 px-4 py-2 rounded-full hover:bg-[#2C2A29] hover:text-[#F4F1ED] transition-colors">All</button>
-            <button className="border border-[#2C2A29]/20 px-4 py-2 rounded-full hover:bg-[#2C2A29] hover:text-[#F4F1ED] transition-colors">Reels</button>
-            <button className="border border-[#2C2A29]/20 px-4 py-2 rounded-full hover:bg-[#2C2A29] hover:text-[#F4F1ED] transition-colors">Editorial</button>
-          </div>
->>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
@@ -258,11 +217,7 @@ export default function Portfolio() {
               <CarouselContent className="-ml-4">
                 {[
                   { src: reelVideo, title: "Portfolio Reel" },
-<<<<<<< HEAD
                   { src: xenaVideo, title: "Xena - Cinematic" },
-=======
-                  { src: creativeLoop, title: "Creative Loop" },
->>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
                   { src: benGroomsmen, title: "Ben & Groomsmen" },
                   { src: oliviaParents, title: "Olivia & Parents" },
                 ].map((item, index) => (
