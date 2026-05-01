@@ -75,16 +75,13 @@ export default function WeddingPhotography() {
         />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 text-white">
-          <p className="text-[10px] tracking-[0.3em] uppercase mb-6 opacity-80">
-            (Wedding Photography)
+          <p className="text-[10px] tracking-[0.3em] uppercase mb-5 opacity-80">
+            (Stillness, Remembered)
           </p>
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] lowercase italic font-light tracking-wide leading-none">
-            stillness,
+          <h1 className="font-serif text-3xl md:text-5xl lowercase italic font-light tracking-wide leading-tight">
+            wedding photography
           </h1>
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] lowercase italic font-light tracking-wide leading-none mt-2">
-            remembered
-          </h1>
-          <p className="text-xs tracking-[0.2em] uppercase max-w-md opacity-80 leading-relaxed mt-10">
+          <p className="text-[10px] md:text-xs tracking-[0.2em] uppercase max-w-md opacity-80 leading-relaxed mt-6">
             Timeless frames of the quiet details and unrepeatable moments of your day.
           </p>
           <button

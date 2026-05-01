@@ -1,4 +1,5 @@
-import { Switch, Route } from "wouter";
+import { useEffect, useRef, useState } from "react";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/sonner";
@@ -23,11 +24,29 @@ function Router() {
   );
 }
 
+function RouteLoader() {
+  const [location] = useLocation();
+  const [loaderKey, setLoaderKey] = useState<number | null>(0);
+  const isFirst = useRef(true);
+
+  useEffect(() => {
+    if (isFirst.current) {
+      isFirst.current = false;
+      return;
+    }
+    setLoaderKey(Date.now());
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  if (loaderKey === null) return null;
+  return <Loader key={loaderKey} short={loaderKey !== 0} />;
+}
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Loader />
+        <RouteLoader />
         <Toaster />
         <Router />
       </TooltipProvider>

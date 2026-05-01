@@ -1,17 +1,24 @@
 import { useEffect, useState } from "react";
 
-export function Loader() {
+type LoaderProps = {
+  /** When true, uses the shorter inter-page timing instead of the initial-load timing. */
+  short?: boolean;
+};
+
+export function Loader({ short = false }: LoaderProps) {
   const [visible, setVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const fadeTimer = setTimeout(() => setFadeOut(true), 1700);
-    const removeTimer = setTimeout(() => setVisible(false), 2500);
+    const fadeDelay = short ? 700 : 1700;
+    const removeDelay = short ? 1200 : 2500;
+    const fadeTimer = setTimeout(() => setFadeOut(true), fadeDelay);
+    const removeTimer = setTimeout(() => setVisible(false), removeDelay);
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(removeTimer);
     };
-  }, []);
+  }, [short]);
 
   if (!visible) return null;
 

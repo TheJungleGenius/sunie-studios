@@ -87,21 +87,13 @@ export default function Portfolio() {
       />
 
       <main className="pt-32 px-6 md:px-12 max-w-7xl mx-auto pb-24">
-        <header className="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-          <div>
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl lowercase italic font-light tracking-wide mb-4">
-              wedding content creation
-            </h1>
-            <p className="text-xs tracking-[0.2em] uppercase max-w-sm text-muted-foreground leading-relaxed">
-              Motion-first storytelling — aesthetic reels, quiet in-betweens, and cinematic moments in looping form.
-            </p>
-          </div>
-
-          <div className="hidden md:flex gap-4 text-[10px] tracking-widest uppercase">
-            <button className="border border-[#2C2A29]/20 px-4 py-2 rounded-full hover:bg-[#2C2A29] hover:text-[#F4F1ED] transition-colors">All</button>
-            <button className="border border-[#2C2A29]/20 px-4 py-2 rounded-full hover:bg-[#2C2A29] hover:text-[#F4F1ED] transition-colors">Reels</button>
-            <button className="border border-[#2C2A29]/20 px-4 py-2 rounded-full hover:bg-[#2C2A29] hover:text-[#F4F1ED] transition-colors">Editorial</button>
-          </div>
+        <header className="mb-16 md:mb-24 flex flex-col items-center text-center gap-4">
+          <h1 className="font-serif text-3xl md:text-5xl lowercase italic font-light tracking-wide">
+            wedding content creation
+          </h1>
+          <p className="text-[10px] md:text-xs tracking-[0.2em] uppercase max-w-sm text-muted-foreground leading-relaxed">
+            Motion-first storytelling — aesthetic reels, quiet in-betweens, and cinematic moments in looping form.
+          </p>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
