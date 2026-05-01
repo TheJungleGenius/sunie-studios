@@ -1,7 +1,11 @@
 import { Navigation } from "@/components/Navigation";
 import { Link } from "wouter";
 import canvasBg from "@/assets/images/canvas.jpg";
+<<<<<<< HEAD
 import weddingsImg from "@/assets/images/sarah-luke-1.jpg";
+=======
+import weddingsImg from "@/assets/images/weddings.jpg";
+>>>>>>> a90ad3d886d01b67b74572b8e44c09a605613558
 import creativeVideo from "@/assets/videos/creative-loop.mp4";
 
 export default function Home() {
