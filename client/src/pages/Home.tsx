@@ -1,8 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Link } from "wouter";
 import canvasBg from "@/assets/images/canvas.jpg";
-import weddingsImg from "@/assets/images/sarah-luke-1.jpg";
-import creativeVideo from "@/assets/videos/creative-loop.mp4";
+import weddingsImg from "@/assets/images/sarah-luke-2.jpg";
+import creativeVideo from "@/assets/videos/marcus + tarryn.mp4";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#F4F1ED]/80 mix-blend-multiply z-10" />
 
         {/* Centered Looping Video/GIF Replacement */}
-        <div className="relative z-20 w-48 h-64 md:w-64 md:h-80 overflow-hidden shadow-2xl transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105">
+        <div className="relative z-20 w-48 h-80 md:w-64 md:h-100 overflow-hidden shadow-2xl transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105">
            <video 
             src={creativeVideo} 
             autoPlay 
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
 
         <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-[#2C2A29]">
-          <h4 className="font-serif text-5xl md:text-7xl lg:text-8xl lowercase italic mb-4 font-light tracking-wide group-hover:text-white transition-colors duration-500">wedding content creation</h4>
+          <h4 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-light tracking-wide group-hover:text-white transition-colors duration-500" style={{ fontFamily: "WhisperingSignature, cursive" }}>content creation</h4>
           <span className="text-[10px] tracking-[0.2em] uppercase border border-[#2C2A29]/30 px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 group-hover:border-white/50 group-hover:text-white transition-all duration-500 backdrop-blur-sm">enter</span>
         </div>
       </Link>
@@ -47,7 +47,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]"
         />
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-white">
-          <h4 className="font-serif text-5xl md:text-7xl lg:text-8xl lowercase italic mb-4 font-light tracking-wide text-center px-4">wedding photography</h4>
+          <h4 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-light tracking-wide text-center px-4" style={{ fontFamily: "WhisperingSignature, cursive" }}>photography</h4>
           <span className="text-[10px] tracking-[0.2em] uppercase border border-white/30 px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm">enter</span>
         </div>
       </Link>

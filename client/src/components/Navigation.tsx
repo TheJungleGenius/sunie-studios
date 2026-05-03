@@ -24,7 +24,7 @@ export function Navigation() {
           The Sunie Studio
         </Link>
         <a
-          href="https://www.tiktok.com/thesuniestudio"
+          href="https://www.tiktok.com/@thesuniestudio"
           target="_blank"
           rel="noreferrer"
           className="hover:opacity-70 transition-opacity"

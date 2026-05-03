@@ -1,6 +1,18 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Agata";
+  src: url("/src/assets/fonts/agata-regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "WhisperingSignature";
+  src: url("/src/assets/fonts/WhisperingSignature.ttf") format("truetype");
+  font-weight: normal;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
