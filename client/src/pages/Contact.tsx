@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import {
   Form,
   FormControl,
@@ -27,8 +28,23 @@ const enquirySchema = z.object({
 
 type EnquiryFormValues = z.infer<typeof enquirySchema>;
 
+const PACKAGE_LABELS: Record<string, string> = {
+  "short-story": "Short Story (Content Creation)",
+  "full-story": "Full Story (Content Creation)",
+  prologue: "Prologue (Photography)",
+  intimate: "Intimate (Photography)",
+  wedding: "Wedding (Photography)",
+};
+
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const packageLabel = useMemo(() => {
+    if (typeof window === "undefined") return null;
+    const slug = new URLSearchParams(window.location.search).get("package");
+    if (!slug) return null;
+    return PACKAGE_LABELS[slug] ?? null;
+  }, []);
 
   const form = useForm<EnquiryFormValues>({
     resolver: zodResolver(enquirySchema),
@@ -36,11 +52,17 @@ export default function Contact() {
       name: "",
       email: "",
       phone: "",
-      eventType: "",
+      eventType: packageLabel ?? "",
       eventDate: "",
       message: "",
     },
   });
+
+  useEffect(() => {
+    if (packageLabel) {
+      form.setValue("eventType", packageLabel);
+    }
+  }, [packageLabel, form]);
 
   const onSubmit = async (data: EnquiryFormValues) => {
     setIsSubmitting(true);
@@ -76,6 +98,11 @@ export default function Contact() {
           <p className="text-xs tracking-[0.2em] uppercase max-w-sm text-[#2C2A29]/50 leading-relaxed">
             Let's create something beautiful together.
           </p>
+          {packageLabel && (
+            <p className="mt-8 text-[10px] tracking-[0.3em] uppercase text-[#2C2A29]/70">
+              (Enquiring about: <span className="font-serif text-sm normal-case tracking-normal italic">{packageLabel}</span>)
+            </p>
+          )}
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
@@ -255,6 +282,7 @@ export default function Contact() {
           </aside>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

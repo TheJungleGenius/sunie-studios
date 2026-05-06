@@ -32,8 +32,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
         </div>
 
-        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-[#2C2A29]">
-          <h4 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-light tracking-wide group-hover:text-white transition-colors duration-500" style={{ fontFamily: "WhisperingSignature, cursive" }}>content creation</h4>
+        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-[#FFFFFF]">
+          <h4 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-light tracking-wide transition-colors duration-500" style={{ fontFamily: "WhisperingSignature, cursive" }}>content creation</h4>
           <span className="text-[10px] tracking-[0.2em] uppercase border border-[#2C2A29]/30 px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 group-hover:border-white/50 group-hover:text-white transition-all duration-500 backdrop-blur-sm">enter</span>
         </div>
       </Link>

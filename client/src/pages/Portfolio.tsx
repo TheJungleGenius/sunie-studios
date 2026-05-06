@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import { PackageGrid, type PackageItem } from "@/components/PackageGrid";
 import { VideoModal } from "@/components/VideoModal";
 import { CollageGallery, type CollageItem } from "@/components/CollageGallery";
 import reelVideo from "@/assets/videos/portfolio-reel.mp4";
@@ -50,6 +52,32 @@ type VideoItem = {
   src: string;
   title: string;
 };
+
+const contentPackages: PackageItem[] = [
+  {
+    name: "Short Story",
+    slug: "short-story",
+    tagline: "A tighter cut — the highlights of the day in motion.",
+    inclusions: [
+      "Half-day coverage",
+      "One teaser reel (≤ 60 seconds)",
+      "One highlight reel (≤ 2 minutes)",
+      "Social-ready vertical exports",
+    ],
+  },
+  {
+    name: "Full Story",
+    slug: "full-story",
+    tagline: "The day told in full, edited to be returned to in years.",
+    inclusions: [
+      "Full-day coverage",
+      "Multiple short-form reels",
+      "A long-form film of the day",
+      "Behind-the-scenes b-roll",
+      "Vertical + horizontal exports",
+    ],
+  },
+];
 
 const collageItems: CollageItem[] = [
   { src: reelVideo, title: "Portfolio Reel", type: "video" },
@@ -221,12 +249,12 @@ export default function Portfolio() {
                   { src: benGroomsmen, title: "Ben & Groomsmen" },
                   { src: oliviaParents, title: "Olivia & Parents" },
                 ].map((item, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={index} className="pl-4 basis-2/3 md:basis-1/3 lg:basis-1/4">
                     <div
                       className="group cursor-pointer"
                       onClick={() => setSelectedVideo(item)}
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden bg-[#E8E5E1] mb-4">
+                      <div className="relative aspect-[9/16] overflow-hidden bg-[#E8E5E1] mb-4">
                         <LoopingClip
                           src={item.src}
                           className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]"
@@ -249,8 +277,34 @@ export default function Portfolio() {
             </Carousel>
           </div>
 
+          {/* Packages */}
+          <div className="md:col-span-12">
+            <PackageGrid
+              eyebrow="Packages"
+              heading="ways to work together"
+              packages={contentPackages}
+            />
+          </div>
+
+          {/* Closing CTA */}
+          <div className="md:col-span-12 mt-16 md:mt-24 border-t border-[#2C2A29]/10 pt-20 md:pt-28 text-center">
+            <p className="text-[10px] tracking-[0.2em] uppercase mb-6 text-[#2C2A29]/50">
+              (Enquire)
+            </p>
+            <h2 className="font-serif text-5xl md:text-7xl lowercase italic font-light tracking-wide mb-10">
+              begin your story
+            </h2>
+            <a
+              href="/contact"
+              className="inline-block border border-[#2C2A29] px-8 py-3 text-xs tracking-widest uppercase hover:bg-[#2C2A29] hover:text-[#F4F1ED] transition-colors duration-300"
+            >
+              Enquire Now
+            </a>
+          </div>
+
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

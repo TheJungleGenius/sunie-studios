@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import { PackageGrid, type PackageItem } from "@/components/PackageGrid";
 import { CollageGallery, type CollageItem } from "@/components/CollageGallery";
 import {
   Carousel,
@@ -36,6 +38,43 @@ const detailShots = [
   { src: benOlivia2, title: "Ben & Olivia - Moment" },
   { src: sarahLuke3, title: "Sarah & Luke - Candid" },
   { src: chanyaNethmin3, title: "Chanya & Nethmin - After" },
+];
+
+const photographyPackages: PackageItem[] = [
+  {
+    name: "Prologue",
+    slug: "prologue",
+    tagline: "Engagement, elopement — the quiet beginning of a story.",
+    inclusions: [
+      "2-hour shoot",
+      "Location of your choice",
+      "Edited gallery (~50 images)",
+      "Personal print rights",
+    ],
+  },
+  {
+    name: "Intimate",
+    slug: "intimate",
+    tagline: "A smaller gathering, photographed with the same care as the largest day.",
+    inclusions: [
+      "Half-day coverage",
+      "Getting-ready through ceremony",
+      "Edited gallery (~250 images)",
+      "Online gallery delivery",
+    ],
+  },
+  {
+    name: "Wedding",
+    slug: "wedding",
+    tagline: "The full day, beginning to last dance.",
+    inclusions: [
+      "Full-day coverage",
+      "Second shooter option",
+      "Edited gallery (~600 images)",
+      "Heirloom album option",
+      "Online gallery + USB",
+    ],
+  },
 ];
 
 const collageItems: CollageItem[] = [
@@ -206,6 +245,13 @@ export default function WeddingPhotography() {
           </Carousel>
         </section>
 
+        {/* Packages */}
+        <PackageGrid
+          eyebrow="Packages"
+          heading="ways to work together"
+          packages={photographyPackages}
+        />
+
         {/* Closing CTA */}
         <section className="mt-32 md:mt-48 border-t border-[#2C2A29]/10 pt-20 md:pt-28 text-center">
           <p className="text-[10px] tracking-[0.2em] uppercase mb-6 text-[#2C2A29]/50">
@@ -222,6 +268,7 @@ export default function WeddingPhotography() {
           </a>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
