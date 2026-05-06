@@ -31,9 +31,6 @@ export function Navigation() {
         >
           TIKTOK.
         </a>
-        <Link href="/contact" className="hover:opacity-70 transition-opacity">
-          Enquire Now
-        </Link>
         <a
           href="https://www.instagram.com/thesuniestudio/?hl=en"
           target="_blank"
@@ -42,6 +39,9 @@ export function Navigation() {
         >
           IG.
         </a>
+        <Link href="/contact" className="hover:opacity-70 transition-opacity">
+          Enquire Now
+        </Link>
       </nav>
 
       {/* Mobile bar */}
